@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node build/server.js",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src --out-dir build"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/express": "^4.17.21",
+    "eslint": "^8.54.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.5.0",
+    "typescript": "^5.3.2"
+  }
+}
