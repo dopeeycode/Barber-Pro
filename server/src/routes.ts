@@ -1,7 +1,6 @@
 import { Router } from 'express'
+import { RegisterUserController } from './controllers/user/register-user-controller'
 
 export const router = Router()
 
-router.get('/', (request, reply) => {
-  reply.json({ ok: true })
-})
+router.post('/users', new RegisterUserController().handle)
