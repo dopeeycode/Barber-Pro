@@ -1,4 +1,4 @@
-import { HaircutQuantityLimitError } from '@/errors/haircut-quantity-error'
+import { BePremiumError } from '@/errors/be-premium-error'
 import { prisma } from '@/lib/prisma'
 import { Haircut } from '@prisma/client'
 
@@ -32,7 +32,9 @@ export class CreateHaircutService {
       haircutQuantityAnUser >= 3 &&
       user?.subscriptions?.status !== 'active'
     ) {
-      throw new HaircutQuantityLimitError()
+      throw new BePremiumError(
+        'you have exceeded the limit. go premium for unlimited models',
+      )
     }
 
     const haircut = await prisma.haircut.create({
