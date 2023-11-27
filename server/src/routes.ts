@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { CreateHaircutController } from './controllers/haircut/create-haircut-controller'
+import { ListHaircutController } from './controllers/haircut/list-haircut-controller'
 import { AuthenticateUserController } from './controllers/user/authenticate-user-controller'
 import { DetailsUserController } from './controllers/user/details-user-controller'
 import { RegisterUserController } from './controllers/user/register-user-controller'
@@ -16,3 +17,4 @@ router.put('/users', isAuthenticated, new UpdateUserController().handle)
 
 // Routes Haircut
 router.post('/haircut', isAuthenticated, new CreateHaircutController().hanlde)
+router.get('/haircuts', isAuthenticated, new ListHaircutController().handle)
