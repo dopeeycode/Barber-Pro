@@ -2,7 +2,7 @@ import { env } from '@/env'
 import { prisma } from '@/lib/prisma'
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
-import { InvalidCredentialsError } from '../errors/invalid-credentials-error'
+import { InvalidCredentialsError } from '../../errors/invalid-credentials-error'
 
 interface AuthenticateUserServiceRequest {
   email: string
