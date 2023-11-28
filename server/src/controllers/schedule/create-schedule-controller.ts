@@ -1,6 +1,7 @@
 import { CreateScheduleService } from '@/services/schedule/create-schedule-service'
 import { Request, Response } from 'express'
 import { z } from 'zod'
+
 export class CreateScheduleController {
   async handle(request: Request, reply: Response) {
     const { user_id } = request
