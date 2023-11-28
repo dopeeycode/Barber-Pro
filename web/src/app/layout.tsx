@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={spaceGrotesk.variable} lang="en">
-      <body className="bg-zinc-50 text-zinc-900 antialiased">{children}</body>
+      <body className="bg-barber-900 text-zinc-50 antialiased">{children}</body>
     </html>
   )
 }
