@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-spaceGrotesk)',
+        sans: 'var(--font-poppins)',
       },
       colors: {
         barber: {

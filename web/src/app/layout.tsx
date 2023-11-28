@@ -1,16 +1,17 @@
 import { Metadata } from 'next'
-import { Space_Grotesk as SpaceGrotesk } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
-const spaceGrotesk = SpaceGrotesk({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-spaceGrotesk',
+  weight: ['300', '400', '600', '700'],
+  variable: '--font-poppins',
 })
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | BarberPro',
-    default: 'BarberPro',
+    template: '%s | Barber PRO',
+    default: 'Barber PRO',
   },
   description: 'Cadastre sua barbearia aqui !',
 }
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className={spaceGrotesk.variable} lang="en">
+    <html className={poppins.variable} lang="en">
       <body className="bg-barber-900 text-zinc-50 antialiased">{children}</body>
     </html>
   )
