@@ -14,7 +14,7 @@ export function isAuthenticated(
   const authTokenRequest = request.headers.authorization
 
   if (!authTokenRequest) {
-    return reply.status(401).end()
+    return reply.status(401).json({ issues: 'NOT AUTHENTICATE' })
   }
 
   const [, token] = authTokenRequest.split(' ')
