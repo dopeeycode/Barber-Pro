@@ -41,7 +41,7 @@ export default function FormRegister() {
         </button>
       </form>
       <span className="mt-3 text-sm sm:text-base text-center">
-        Ja tenhho conta.{' '}
+        Ja tenho conta.{' '}
         <Link
           href="/login"
           className="underline underline-offset-2 transition-opacity 
