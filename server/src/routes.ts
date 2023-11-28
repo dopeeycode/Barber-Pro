@@ -5,6 +5,7 @@ import { CreateHaircutController } from './controllers/haircut/create-haircut-co
 import { DetailsHaircutController } from './controllers/haircut/details-haircut-controller'
 import { ListHaircutController } from './controllers/haircut/list-haircut-controller'
 import { UpdateHaircutController } from './controllers/haircut/update-haircut-controller'
+import { CreateScheduleController } from './controllers/schedule/create-schedule-service'
 import { AuthenticateUserController } from './controllers/user/authenticate-user-controller'
 import { DetailsUserController } from './controllers/user/details-user-controller'
 import { RegisterUserController } from './controllers/user/register-user-controller'
@@ -38,3 +39,7 @@ router.get(
   isAuthenticated,
   new DetailsHaircutController().handle,
 )
+
+// Routes Schedule / Serviços
+
+router.post('/schedule', isAuthenticated, new CreateScheduleController().handle)
