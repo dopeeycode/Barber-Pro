@@ -1,4 +1,6 @@
-import { Metadata } from 'next'
+'use client'
+
+import { AuthProvider } from '@/context/AuthContext'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -8,14 +10,6 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Barber PRO',
-    default: 'Barber PRO',
-  },
-  description: 'Cadastre sua barbearia aqui !',
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -23,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html className={poppins.variable} lang="en">
-      <body className="bg-barber-900 text-zinc-50 antialiased">{children}</body>
+      <body className="bg-barber-900 text-zinc-50 antialiased">
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   )
 }
